@@ -1,12 +1,14 @@
 # Path to your oh-my-zsh installation.
   export ZSH=/home/josh/.oh-my-zsh
 
+#tell xfceterm to fuck off and use 256 colors
+  export TERM=xterm-256color
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
-
+ZSH_THEME="agnoster"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -52,8 +54,12 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 # User configuration
-
-  export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin"
+  export SRC_HOME="/media/UsbDrive/source/"
+  export SBT_HOME="/media/UsbDrive/dev/sbt"
+  export SCALA_HOME="/media/UsbDrive/dev/scala"
+  export JAVA_HOME="/media/UsbDrive/dev/jdk"
+  export MAVEN_HOME="/media/UsbDrive/dev/maven"
+  export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$MAVEN_HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -82,6 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 
 export NVM_DIR="/home/josh/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
