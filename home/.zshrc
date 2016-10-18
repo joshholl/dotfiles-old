@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/josh/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 #tell xfceterm to fuck off and use 256 colors
   export TERM=xterm-256color
@@ -59,9 +59,9 @@ plugins=(git)
   export SCALA_HOME="/media/UsbDrive/dev/scala"
   export JAVA_HOME="/media/UsbDrive/dev/jdk"
   export MAVEN_HOME="/media/UsbDrive/dev/maven"
-  export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$MAVEN_HOME/bin"
+  #export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:$JAVA_HOME/bin:$SCALA_HOME/bin:$SBT_HOME/bin:$MAVEN_HOME/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
-
+export PATH=$PATH:$HOME/bin:$HOME/.gem/ruby/2.3.0/bin:/usr/local/bin
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -90,6 +90,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-export NVM_DIR="/home/josh/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
