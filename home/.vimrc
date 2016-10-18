@@ -31,6 +31,7 @@ if !exists('g:airline_symbols')
 set laststatus=2
 
 " solarized configuration
+let g:solarized_termcolors=256
 syntax enable
 set background=dark
 colorscheme solarized
