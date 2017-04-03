@@ -13,7 +13,7 @@ Plug 'altercation/vim-colors-solarized'
 " Airline status bar, and solarized theme
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'flowtype/vim-flow'
 call plug#end()
 
 source $HOME/.config/nvim/config/pluginsconf.vimrc
