@@ -16,4 +16,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'flowtype/vim-flow'
 call plug#end()
 
-source $HOME/.config/nvim/config/pluginsconf.vimrc
+for file in split(globpath($HOME . '.config/nvim/config/', '*.vim'), '\n')
+	execute 'source' fnameescape(file)
+endfor
