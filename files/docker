@@ -1,0 +1,41 @@
+#!/bin/env bash
+
+alias dk="docker"
+alias dkup="open --background -a Docker"
+alias dkkill="killall Docker"
+alias dkls="docker ps"
+alias dklsla="docker ps -a"
+
+function dkdn() {
+	local restore=$IFS
+	IFS=$'\n'
+	for container in $(docker ps -q); do
+		docker stop $container
+	done
+	IFS=$restore
+}
+
+
+function dkclean() {
+	local restore=$IFS
+	IFS=$'\n'
+	for container in $(docker ps -aq); do
+		docker rm $container
+	done
+	IFS=$restore
+}
+
+function dkimgclean() {
+	local restore=$IFS
+	IFS=$'\n'
+	for img in $(docker images -q); do
+		docker rmi $img
+	done
+	IFS=$restore
+}
+function dkpurge() {
+ 	dkdn
+ 	dkclean
+ 	dkimgclean
+ }
+
