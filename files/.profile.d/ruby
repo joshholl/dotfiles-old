@@ -1,6 +1,8 @@
-# Ansible managed RBENV
-export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
-source $RBENV_ROOT/completions/rbenv.zsh
-# Ansible managed RBENV
+if [ -d $HOME/.rbenv ]; fi
+
+	export RBENV_ROOT="$HOME/.rbenv"
+	export PATH="$RBENV_ROOT/bin:$PATH"
+	eval "$(rbenv init -)"
+
+	source $RBENV_ROOT/completions/rbenv.zsh
+fi
