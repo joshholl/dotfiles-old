@@ -1,0 +1,9 @@
+if [ "$(uname)" == "Darwin" ];
+	export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+else 
+	echo "no idea"
+	export JAVA_HOME=
+fi
+
+
+export CLASSPATH=.:$CLASSPATH
