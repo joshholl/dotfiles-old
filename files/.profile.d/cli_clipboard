@@ -1,0 +1,3 @@
+if [[ "$(uname) != "Darwin" ]]; then
+	alias pbcopy='xclip -sel clip'
+fi
