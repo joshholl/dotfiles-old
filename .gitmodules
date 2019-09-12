@@ -2,5 +2,5 @@
 	path = files/.antigen
 	url = https://github.com/zsh-users/antigen.git
 [submodule ".pyenv"]
-	path = .pyenv
+	path = files/.pyenv
 	url = https://github.com/pyenv/pyenv.git
