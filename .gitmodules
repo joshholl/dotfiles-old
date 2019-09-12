@@ -7,3 +7,6 @@
 [submodule "files/.rbenv"]
 	path = files/.rbenv
 	url = https://github.com/rbenv/rbenv.git
+[submodule "files/.goenv"]
+	path = files/.goenv
+	url = https://github.com/syndbg/goenv.git
