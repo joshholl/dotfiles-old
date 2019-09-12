@@ -10,12 +10,14 @@ source $HOME/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
+if [[ "$(uname)" == "Darwin" ]]; then
+	antigen bundle brew
+	antigen bundle osx
+fi
 antigen bundle battery
-antigen bundle brew
 antigen bundle colorize
 antigen bundle command-not-found
 antigen bundle git
-antigen bundle osx
 antigen bundle tmux
 
 antigen bundle zsh-users/zsh-syntax-highlighting
