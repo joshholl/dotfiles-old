@@ -1,11 +1,9 @@
 #!/bin/zsh
 
 source "$HOME/.profile"
-export PATH=$HOME/bin:/usr/local/share/dotnet:/usr/local/bin:$PATH
 unsetopt correct_all
 
 source $HOME/.antigen/antigen.zsh
-
 
 
 antigen use oh-my-zsh
@@ -53,10 +51,6 @@ antigen apply
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-
-source /usr/local/share/dotnet
-source $HOME/.config/joshholl/aliases/main
-
 alias ls='ls -G'
 alias ll='ls -alF'
 alias la='ls -A'
@@ -94,69 +88,8 @@ alias vimdiff="nvim -d"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.nvm/nvm.sh
 
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
-
-
-
-
-# Ansible managed GOENV 
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-# Ansible managed GOENV 
-
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
-
-
-export ANDROID_HOME=/Users/hollandj/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-# Add Visual Studio Code (code)
-export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
-
-export ASPNETCORE_ENVIRONMENT=Development
-alias dki=docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q) && docker rmi $(docker image list -q)
-# Ansible managed PYENV 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-source $PYENV_ROOT/completions/pyenv.zsh
-# Ansible managed PYENV 
-# Ansible managed RBENV
-export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
-source $RBENV_ROOT/completions/rbenv.zsh
-# Ansible managed RBENV
-
-if [ $TERM_PROGRAM = "Apple_Terminal" ]; then
+if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
 	if [[ -z "$TMUX" ]]; then
     if tmux has-session 2>/dev/null; then
         exec tmux attach
