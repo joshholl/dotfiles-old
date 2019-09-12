@@ -1,4 +1,4 @@
-if [ -d $HOME/.rbenv ]; fi
+if [ -d $HOME/.rbenv ]; then
 
 	export RBENV_ROOT="$HOME/.rbenv"
 	export PATH="$RBENV_ROOT/bin:$PATH"

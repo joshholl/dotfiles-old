@@ -25,3 +25,14 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+# source all of the stuff in .profile d
+if [ -d "$HOME/.profile.d" ]; then
+	 for f in ~/.profile.d/*; do source $f; done
+fi
+
+#source all of the stuff in .private-profile.d
+if [ -d "$HOME/.private-profile.d" ]; then
+	 for f in ~/.private-profile.d/*; do source $f; done
+fi
+

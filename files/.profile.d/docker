@@ -5,7 +5,7 @@ which docker > /dev/null 2>&1
 if [[ "$?" == "0" ]]; then
 	alias dk="docker"
 
-	if [ "$(uname)" == "Darwin" ]; then
+	if [[ "$(uname)" == "Darwin" ]]; then
 		alias dkup="open --background -a Docker"
 		alias dkkill="killall Docker"
 	fi
