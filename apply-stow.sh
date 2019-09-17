@@ -9,9 +9,14 @@ has_stow () {
 	fi
 }
 
+rename_old_profile () {
+	[ -f $HOME/.profile ] && ! [ -L $HOME/.profile ]  && mv $HOME/.profile $HOME/.profile_pre_stow
+}
 
 
 has_stow
+rename_old_profile
+
 git submodule init
 git submodule update
 stow -R -t ~/ files
