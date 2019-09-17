@@ -14,8 +14,15 @@ rename_old_profile () {
 }
 
 
+make_required_dirs () {
+	mkdir -p $(pyenv root)/plugins
+	mkdir -p $(rbenv root)/plugins
+}
+
 has_stow
 rename_old_profile
+make_required_dirs
+
 
 git submodule init
 git submodule update
