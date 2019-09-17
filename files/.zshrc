@@ -16,7 +16,9 @@ antigen bundle battery
 antigen bundle colorize
 antigen bundle command-not-found
 antigen bundle git
-antigen bundle tmux
+
+command -v tmux > /dev/null 2>&1  && antigen bundle tmux
+
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions
