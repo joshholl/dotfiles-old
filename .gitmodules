@@ -16,3 +16,6 @@
 [submodule "pyenv-plugins/pyenv-virtualenvwrapper"]
 	path = pyenv-plugins/pyenv-virtualenvwrapper
 	url = https://github.com/pyenv/pyenv-virtualenvwrapper.git
+[submodule "rbenv-plugins/ruby-build"]
+	path = rbenv-plugins/ruby-build
+	url = https://github.com/rbenv/ruby-build
