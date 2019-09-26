@@ -1,7 +1,7 @@
-[submodule ".antigen"]
+[submodule "files/.antigen"]
 	path = files/.antigen
 	url = https://github.com/zsh-users/antigen.git
-[submodule ".pyenv"]
+[submodule "files/.pyenv"]
 	path = files/.pyenv
 	url = https://github.com/pyenv/pyenv.git
 [submodule "files/.rbenv"]
@@ -22,6 +22,3 @@
 [submodule "files/.nvm"]
 	path = files/.nvm
 	url = https://github.com/nvm-sh/nvm.git
-[submodule "tpm"]
-	path = tpm
-	url = https://github.com/tmux-plugins/tpm
