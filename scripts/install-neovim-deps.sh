@@ -24,9 +24,11 @@ if ! [ "$(pyenv virtualenvs | grep neovim3 | wc -l)" -gt "0" ]; then
 fi
 
 # RUBY SETUP
-if ! [ "$(rbenv versions | grep 2.6.4 | wc -l )" -gt "0" ]; then 
-rbenv	install 2.6.4
-rbenv global 2.6.4
+ruby_26=2.6.3
+
+if ! [ "$(rbenv versions | grep $ruby_26 | wc -l )" -gt "0" ]; then 
+rbenv	install $ruby_26
+rbenv global $ruby_26
 gem install neovim
 fi
 
