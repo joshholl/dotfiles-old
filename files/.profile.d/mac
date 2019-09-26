@@ -1,0 +1,6 @@
+# vim: filetype=sh
+
+if [[ "$(uname)"  == "Darwin" ]]; then
+	alias ls="gls --color=auto"
+fi
+

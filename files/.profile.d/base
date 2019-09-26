@@ -1,1 +1,5 @@
-alias ls="ls --color=auto"
+# vim: filetype=sh
+
+if [[ "$(uname)" != "Darwin" ]]; then
+	alias ls="ls --color=auto"
+fi
