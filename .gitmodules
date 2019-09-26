@@ -19,3 +19,6 @@
 [submodule "rbenv-plugins/ruby-build"]
 	path = rbenv-plugins/ruby-build
 	url = https://github.com/rbenv/ruby-build
+[submodule "files/.nvm"]
+	path = files/.nvm
+	url = https://github.com/nvm-sh/nvm.git
