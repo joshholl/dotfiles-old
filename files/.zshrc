@@ -1,6 +1,5 @@
 #!/bin/zsh
 
-source "$HOME/.profile"
 unsetopt correct_all
 
 source $HOME/.antigen/antigen.zsh
@@ -91,6 +90,7 @@ alias vimdiff="nvim -d"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+source "$HOME/.profile"
 if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
 	if [[ -z "$TMUX" ]]; then
     if tmux has-session 2>/dev/null; then
