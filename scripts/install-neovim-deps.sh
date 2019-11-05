@@ -4,6 +4,12 @@
 python_2=2.7.16
 python_3=3.7.4
 
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 	
 if ! [ "$(pyenv virtualenvs | grep neovim2 | wc -l)" -gt "0" ]; then
 	pyenv install $python_2
@@ -25,6 +31,11 @@ fi
 
 # RUBY SETUP
 ruby_26=2.6.3
+
+export RBENV_ROOT="$HOME/.rbenv"
+export PATH="$RBENV_ROOT/bin:$PATH"
+eval "$(rbenv init -)"
+
 
 if ! [ "$(rbenv versions | grep $ruby_26 | wc -l )" -gt "0" ]; then 
 rbenv	install $ruby_26
