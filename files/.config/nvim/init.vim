@@ -16,7 +16,14 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+
+" Editing niceties
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-abolish'
+
+
+
 "javascript 
 Plug 'flowtype/vim-flow', { 'for': 'javascript' }
 Plug 'ryanoasis/vim-devicons'
@@ -36,7 +43,6 @@ endif
   Plug 'Shougo/deoplete.nvim'
  " For Denite features
   Plug 'Shougo/denite.nvim'
-
 
 " Enable deoplete at startup
 
