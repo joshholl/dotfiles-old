@@ -1,0 +1,6 @@
+# vim: filetype=sh
+
+if [[ "$(uname)"  == "Linux" ]]; then
+		alias lupdt="sudo apt update && sudo apt list --upgradable"
+fi
+
