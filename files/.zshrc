@@ -15,7 +15,7 @@ antigen bundle battery
 antigen bundle colorize
 antigen bundle command-not-found
 antigen bundle git
-
+antigen bundle docker
 command -v tmux > /dev/null 2>&1  && antigen bundle tmux
 
 
