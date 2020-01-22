@@ -3,3 +3,8 @@
 if [[ "$(uname)" != "Darwin" ]]; then
 	alias ls="ls --color=auto"
 fi
+
+function dump-path() {
+  echo $PATH | tr ':', "\n"
+}
+
