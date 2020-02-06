@@ -8,3 +8,6 @@ function dump-path() {
   echo $PATH | tr ':', "\n"
 }
 
+if [ -x "$(command -v codium)" ] && [ ! -x "$(command -v code)" ]; then
+  alias code="codium"
+fi
