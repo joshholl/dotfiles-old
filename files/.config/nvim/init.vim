@@ -1,6 +1,6 @@
 let g:python_host_prog=expand('~/.pyenv/versions/neovim2/bin/python')
 let g:python3_host_prog=expand('~/.pyenv/versions/neovim3/bin/python')
-let g:ruby_host_prog=expand('~/.rbenv/versions/2.6.3/bin/ruby')
+let g:ruby_host_prog=expand('~/.rbenv/versions/2.6.5/bin/ruby')
 
 set termguicolors
 
@@ -22,31 +22,16 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-abolish'
 
-
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 "javascript 
 Plug 'flowtype/vim-flow', { 'for': 'javascript' }
 Plug 'ryanoasis/vim-devicons'
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
 " REQUIRED: Add a syntax file. YATS is the best
   Plug 'HerringtonDarkholme/yats.vim'
   Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
- " For async completion
-  Plug 'Shougo/deoplete.nvim'
- " For Denite features
-  Plug 'Shougo/denite.nvim'
 
-" Enable deoplete at startup
-
-  let g:deoplete#enable_at_startup = 1
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
 
