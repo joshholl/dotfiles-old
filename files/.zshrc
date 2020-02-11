@@ -106,9 +106,9 @@ case $TERM_PROGRAM in
 	"Apple_Terminal")
 		attachOrSpawnTmux
 		;;
-	"alacritty")
-		attachOrSpawnTmux
-		;;
+#	"alacritty")
+#		attachOrSpawnTmux
+#		;;
 	*)
 		;;
 esac

@@ -28,11 +28,17 @@ fi
 
 # source all of the stuff in .profile d
 if [ -d "$HOME/.profile.d" ]; then
-	 for f in ~/.profile.d/*; do source $f; done
+  if ! [ -f $HOME/.profile.d/optimized ]; then 
+    cat $HOME/.profile.d/* > $HOME/.profile.d/optimized
+  fi
+  source $HOME/.profile.d/optimized
 fi
 
 #source all of the stuff in .private-profile.d
 if [ -d "$HOME/.private-profile.d" ]; then
-	 for f in ~/.private-profile.d/*; do source $f; done
+  if ! [ -f $HOME/.private-profile.d/optimized ]; then 
+    cat $HOME/.private-profile.d/* > $HOME/.private-profile.d/optimized
+  fi
+  source $HOME/.private-profile.d/optimized
 fi
 
