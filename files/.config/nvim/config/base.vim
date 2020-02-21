@@ -12,3 +12,12 @@ set shiftwidth=4    " Indents will have a width of 4
 set softtabstop=4   " Sets the number of columns for a TAB
 
 set expandtab       " Expand TABs to spaces
+
+
+" show trailing spaces highlighted in read
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/ 
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/ 
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/ 
+autocmd BufWinLeave * call clearmatches()
+
