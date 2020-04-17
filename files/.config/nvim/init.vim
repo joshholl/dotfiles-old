@@ -24,13 +24,16 @@ Plug 'tpope/vim-abolish'
 
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
-"javascript 
-Plug 'flowtype/vim-flow', { 'for': 'javascript' }
+"javascript
 Plug 'ryanoasis/vim-devicons'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'jparise/vim-graphql'
+
 
 " REQUIRED: Add a syntax file. YATS is the best
-  Plug 'HerringtonDarkholme/yats.vim'
-  Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
