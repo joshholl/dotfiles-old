@@ -1,0 +1,15 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Josh Hollandsworth
+	email = josh@joshholl.com
+[alias]
+  p = push
+  pf = push --force-with-lease
+  aa = add :/
+  co = checkout
+  ca = commit --amend
+  can = commit --amend --no-edit
+  cm = commit
+  st = status
+  rem = rebase origin/master
