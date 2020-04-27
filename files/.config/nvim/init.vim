@@ -19,8 +19,14 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components'
 
+
+
+Plug 'neoclide/coc.nvim', {'branch': 'release' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+
+
 
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
@@ -64,7 +70,15 @@ let g:fzf_action = {
 			\ 'ctrl-v': 'vsplit'
 			\}
 
-
+"coc the things
+let g:coc_global_extension = [
+	\ 'coc-snippits',
+	\ 'coc-pairs',
+	\ 'coc-tsserver',
+	\ 'coc-eslint',
+	\ 'coc-prettier',
+	\ 'coc-json'
+	\]
 
 set noshowmode
 set laststatus=2
