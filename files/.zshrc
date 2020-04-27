@@ -92,27 +92,7 @@ alias vimdiff="nvim -d"
 
 source "$HOME/.profile"
 
-function attachOrSpawnTmux() {
-	if [[ -z "$TMUX" ]]; then
-		if tmux has-session 2>/dev/null; then 
-			exec tmux attach
-		else
-			exec tmux
-		fi
-	fi
-}
-
-case $TERM_PROGRAM in 
-	"Apple_Terminal")
-		attachOrSpawnTmux
-		;;
-#	"alacritty")
-#		attachOrSpawnTmux
-#		;;
-	*)
-		;;
-esac
-unset -f attachOrSpawnTmux
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+[[ -f ~/.zsh-theme-sonokai-andromeda ]] && source ~/.zsh-theme-sonokai-andromeda
