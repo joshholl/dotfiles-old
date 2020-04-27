@@ -69,7 +69,7 @@ let g:fzf_action = {
 			\ 'ctrl-s': 'split',
 			\ 'ctrl-v': 'vsplit'
 			\}
-
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden'
 "coc the things
 let g:coc_global_extension = [
 	\ 'coc-snippits',
