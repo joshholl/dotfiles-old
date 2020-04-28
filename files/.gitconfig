@@ -11,5 +11,6 @@
   ca = commit --amend
   can = commit --amend --no-edit
   cm = commit
+  cmm = commit -m 
   st = status
   rem = rebase origin/master
