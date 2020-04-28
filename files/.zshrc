@@ -96,3 +96,5 @@ source "$HOME/.profile"
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 [[ -f ~/.zsh-theme-sonokai-andromeda ]] && source ~/.zsh-theme-sonokai-andromeda
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
