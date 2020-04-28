@@ -5,6 +5,7 @@
 	email = josh@joshholl.com
 [alias]
   p = push
+  ff = pull --ff-only
   pf = push --force-with-lease
   aa = add :/
   co = checkout
