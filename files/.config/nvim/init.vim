@@ -40,7 +40,14 @@ let g:sonokai_style = 'andromeda'
 colorscheme sonokai
 let g:lightline = {'colorscheme': 'sonokai'}
 syntax enable
+set number
 
+"for the love of all that holy tab = 2 spaces
+filetype plugin indent on
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 
 "basic maps
@@ -53,6 +60,14 @@ nnoremap H ^
 nnoremap J 10<down>
 nnoremap K 10<up>
 nnoremap L $
+
+"split panes for proffets
+nnoremap <C-h> <C-W><C-H>
+nnoremap <C-j> <C-W><C-J>
+nnoremap <C-k> <C-W><C-K>
+nnoremap <C-l> <C-W><C-L>
+set splitbelow
+set splitright
 
 
 "NERD Tree Configuration
